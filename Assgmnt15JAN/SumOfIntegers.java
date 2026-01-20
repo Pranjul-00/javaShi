@@ -30,7 +30,7 @@ public class SumOfIntegers {
         else if (choice == 2) {
             System.out.println("\n--- User Input Mode ---");
 
-            System.out.print("How many numbers do you want to add? ");
+            System.out.print("How many numbers do you want to add?: ");
             int count = scanner.nextInt();
 
             int sum = 0;
