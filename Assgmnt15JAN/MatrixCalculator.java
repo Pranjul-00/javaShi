@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MatrixCalculator {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int option;
 
         do {
@@ -13,14 +13,14 @@ public class MatrixCalculator {
             System.out.println("3. Multiplication");
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
-            option = scan.nextInt();
+            option = scanner.nextInt();
 
             switch (option) {
                 case 1:
                     System.out.print("Enter number of rows: ");
-                    int rAdd = scan.nextInt();
+                    int rAdd = scanner.nextInt();
                     System.out.print("Enter number of columns: ");
-                    int cAdd = scan.nextInt();
+                    int cAdd = scanner.nextInt();
 
                     int[][] matrixA = new int[rAdd][cAdd];
                     int[][] matrixB = new int[rAdd][cAdd];
@@ -29,16 +29,16 @@ public class MatrixCalculator {
                     System.out.println("Enter elements of first matrix:");
                     for (int i = 0; i < rAdd; i++) {
                         for (int j = 0; j < cAdd; j++) {
-                            System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + " ");
-                            matrixA[i][j] = scan.nextInt();
+                            System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + ": ");
+                            matrixA[i][j] = scanner.nextInt();
                         }
                     }
 
                     System.out.println("Enter elements of second matrix:");
                     for (int i = 0; i < rAdd; i++) {
                         for (int j = 0; j < cAdd; j++) {
-                            System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + " ");
-                            matrixB[i][j] = scan.nextInt();
+                            System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + ": ");
+                            matrixB[i][j] = scanner.nextInt();
                         }
                     }
 
@@ -59,9 +59,9 @@ public class MatrixCalculator {
 
                 case 2:
                     System.out.print("Enter number of rows: ");
-                    int rSub = scan.nextInt();
+                    int rSub = scanner.nextInt();
                     System.out.print("Enter number of columns: ");
-                    int cSub = scan.nextInt();
+                    int cSub = scanner.nextInt();
 
                     int[][] minuend = new int[rSub][cSub];
                     int[][] subtrahend = new int[rSub][cSub];
@@ -70,16 +70,16 @@ public class MatrixCalculator {
                     System.out.println("Enter elements of first matrix:");
                     for (int i = 0; i < rSub; i++) {
                         for (int j = 0; j < cSub; j++) {
-                            System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + " ");
-                            minuend[i][j] = scan.nextInt();
+                            System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + ": ");
+                            minuend[i][j] = scanner.nextInt();
                         }
                     }
 
                     System.out.println("Enter elements of second matrix:");
                     for (int i = 0; i < rSub; i++) {
                         for (int j = 0; j < cSub; j++) {
-                            System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + " ");
-                            subtrahend[i][j] = scan.nextInt();
+                            System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + ": ");
+                            subtrahend[i][j] = scanner.nextInt();
                         }
                     }
 
@@ -100,14 +100,14 @@ public class MatrixCalculator {
 
                 case 3:
                     System.out.print("Enter rows for first matrix: ");
-                    int row1 = scan.nextInt();
+                    int row1 = scanner.nextInt();
                     System.out.print("Enter columns for first matrix: ");
-                    int col1 = scan.nextInt();
+                    int col1 = scanner.nextInt();
 
                     System.out.print("Enter rows for second matrix: ");
-                    int row2 = scan.nextInt();
+                    int row2 = scanner.nextInt();
                     System.out.print("Enter columns for second matrix: ");
-                    int col2 = scan.nextInt();
+                    int col2 = scanner.nextInt();
 
                     if (col1 != row2) {
                         System.out.println("Matrix multiplication not possible. Cols of first must equal rows of second.");
@@ -119,16 +119,16 @@ public class MatrixCalculator {
                         System.out.println("Enter elements of first matrix:");
                         for (int i = 0; i < row1; i++) {
                             for (int j = 0; j < col1; j++) {
-                                System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + " ");
-                                matOne[i][j] = scan.nextInt();
+                                System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + ": ");
+                                matOne[i][j] = scanner.nextInt();
                             }
                         }
 
                         System.out.println("Enter elements of second matrix:");
                         for (int i = 0; i < row2; i++) {
                             for (int j = 0; j < col2; j++) {
-                                System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + " ");
-                                matTwo[i][j] = scan.nextInt();
+                                System.out.print("Enter value for " + (i + 1) + " " + (j + 1) + ": ");
+                                matTwo[i][j] = scanner.nextInt();
                             }
                         }
 
@@ -161,5 +161,3 @@ public class MatrixCalculator {
         } while (option != 4);
     }
 }
-
-//hello
